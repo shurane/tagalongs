@@ -1,7 +1,5 @@
-<h1>
-  <input [(ngModel)]="searchText" type="text" placeholder="enter artist name"/>
-  {{searchText}}
-  <div *ngFor="let suggestion of suggestions">
-    <suggestion></suggestion>
-  </div>
-</h1>
+<input [(ngModel)]="searchText" type="text" placeholder="enter artist name"/>
+{{searchText}}
+<div class="list-group col-md-3">
+  <suggestion class="list-group-item" *ngFor="let i of suggestions"></suggestion>
+</div>
